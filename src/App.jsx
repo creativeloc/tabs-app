@@ -9,10 +9,14 @@ const App = () => {
   // Current Item
 
   const fetchJobs = async () => {
-    const response = await fetch(url)
-    const newJobs = await response.json()
-    setJobs(newJobs)
-    setIsLoading(false)
+    try {
+      const response = await fetch(url)
+      const newJobs = await response.json()
+      setJobs(newJobs)
+      setIsLoading(false)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   useEffect(() => {
