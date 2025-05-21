@@ -1,4 +1,4 @@
-import Duties from "./src/Duties"
+import Duties from "./Duties"
 
 const JobInfo = ({ jobs }) => {
   const { company, dates, duties, title } = jobs[0]
